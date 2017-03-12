@@ -11,7 +11,8 @@ import {
     Button,
     Picker,
     Navigator,
-    AsyncStorage
+    AsyncStorage,
+    Keyboard
 } from 'react-native';
 
 export default class Setting extends Component {
@@ -24,6 +25,7 @@ export default class Setting extends Component {
 
     componentDidMount() {
         this.getSceneTransition();
+        Keyboard.dismiss();
     }
 
     setSelectSceneTransition(scene) {

@@ -57,13 +57,13 @@ export default class Calculator extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <View>
                     <Text style={styles.title}>Tip Calculator</Text>
                 </View>
 
-                <View>
-                    <Text>Bill amount:</Text>
+                <View style={styles.row}>
+                    <Text style={styles.label}>Bill </Text>
                     <TextInput
                         style={styles.input}
                         keyboardType="numeric"
@@ -88,8 +88,7 @@ export default class Calculator extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 5,
-        backgroundColor: '#F5FCFF',
+        padding: 20,
     },
 
     title: {
@@ -99,8 +98,25 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
+    row: {
+        flexDirection: 'row',
+        marginBottom: 10,
+        marginTop: 10,
+        alignItems: 'baseline'
+    },
+
+    label: {
+        flex: 0.2,
+        height: 35,
+
+    },
+
     input: {
-        height: 40,
+        flex: 0.7,
+        textAlign: 'right',
+        height: 35,
+        borderColor: "#000000",
+        borderWidth: 1,
     }
 
 });
